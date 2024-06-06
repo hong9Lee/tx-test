@@ -49,6 +49,8 @@ class SaveServiceTest {
         assertFalse(customerRepository.findByUserName("test").isPresent());
         assertTrue(pointRepository.findByUserId(anyLong()).isEmpty());
 
+        System.out.println("test");
+
     }
 
 }
