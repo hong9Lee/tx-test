@@ -42,7 +42,6 @@ class SaveServiceTest {
             saveService.createNewCustomer();
         });
 
-        System.out.println("test");
         String expectedMessage = "Intentional exception for rollback";
         String actualMessage = thrown.getMessage();
 
