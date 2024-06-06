@@ -40,7 +40,6 @@ class SaveServiceTest {
 
 
 
-        String expectedMessage = "Intentional exception for rollback";
         String actualMessage = thrown.getMessage();
 
         assertTrue(actualMessage.contains(expectedMessage));
