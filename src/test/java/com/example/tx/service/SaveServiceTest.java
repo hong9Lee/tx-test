@@ -50,6 +50,7 @@ class SaveServiceTest {
         assertTrue(pointRepository.findByUserId(anyLong()).isEmpty());
 
         System.out.println("im main");
+        System.out.println("test");
     }
 
 }
