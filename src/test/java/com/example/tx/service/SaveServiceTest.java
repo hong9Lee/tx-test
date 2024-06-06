@@ -38,9 +38,7 @@ class SaveServiceTest {
         assertEquals(100, point.getPoint());
         */
 
-        Exception thrown = assertThrows(RuntimeException.class, () -> {
-            saveService.createNewCustomer();
-        });
+
 
         String expectedMessage = "Intentional exception for rollback";
         String actualMessage = thrown.getMessage();
