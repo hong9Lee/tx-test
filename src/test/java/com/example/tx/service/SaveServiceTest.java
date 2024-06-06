@@ -40,7 +40,6 @@ class SaveServiceTest {
 
 
 
-        String actualMessage = thrown.getMessage();
 
         assertTrue(actualMessage.contains(expectedMessage));
         assertFalse(customerRepository.findByUserName("test").isPresent());
