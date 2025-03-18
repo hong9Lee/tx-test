@@ -43,3 +43,13 @@ Propagation.NOT_SUPPORT
 
 Propagation.NEVER  
 - non-transactional 로 실행되며 부모 트랜잭션이 존재하면 Exception이 발생한다."
+
+
+## Spring에서 Transaction이 실행되는 흐름  
+1️⃣ 스프링이 @Transactional이 붙은 빈을 감지  
+2️⃣ AOP 프록시 객체를 생성 (CGLIB 또는 JDK 동적 프록시 사용)  
+3️⃣ 클라이언트가 @Transactional이 붙은 메서드를 호출  
+4️⃣ 프록시가 TransactionInterceptor를 실행하여 트랜잭션을 시작  
+5️⃣ 실제 대상 객체의 메서드를 실행 (비즈니스 로직 수행)  
+6️⃣ 예외 발생 여부를 확인하여 트랜잭션을 커밋 또는 롤백  
+7️⃣ 트랜잭션 종료 후 컨트롤을 클라이언트에게 반환  
